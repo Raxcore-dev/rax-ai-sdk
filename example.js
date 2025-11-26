@@ -1,6 +1,6 @@
 const { RaxAI } = require('./dist/index.js');
 
-// Example usage
+// Simple example usage
 async function testSDK() {
   const rax = new RaxAI({
     apiKey: 'your-api-key-here',
@@ -8,10 +8,10 @@ async function testSDK() {
   });
 
   try {
-    const response = await rax.chat.completions.create({
+    const response = await rax.chat({
       model: 'rax-4.0',
       messages: [
-        { role: 'user', content: 'Hello from the SDK!' }
+        { role: 'user', content: 'Hello from the simplified SDK!' }
       ],
       max_tokens: 50
     });

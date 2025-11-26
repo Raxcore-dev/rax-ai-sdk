@@ -1,48 +1,20 @@
-import { RaxAIConfig, ChatCompletionRequest, ChatCompletionResponse, RaxAIError, StreamChunk } from './types';
+import { RaxAIConfig, ChatRequest, ChatResponse, RaxAIError as RaxAIErrorType } from './types';
 export declare class RaxAI {
     private apiKey;
     private baseURL;
     private timeout;
-    private retries;
-    private retryDelay;
     constructor(config: RaxAIConfig);
-    chat: {
-        completions: {
-            create: (request: ChatCompletionRequest) => Promise<ChatCompletionResponse>;
-            createStream: (request: ChatCompletionRequest) => AsyncGenerator<StreamChunk>;
-        };
-    };
-    models: {
-        list: () => Promise<{
-            data: Array<{
-                id: string;
-                object: string;
-                created: number;
-            }>;
-        }>;
-    };
-    usage: {
-        get: (startDate?: string, endDate?: string) => Promise<any>;
-    };
-    private makeRequest;
-    private generateRequestId;
-    private delay;
-    validateApiKey(): Promise<boolean>;
-    getConfig(): Partial<RaxAIConfig>;
+    chat(request: ChatRequest): Promise<ChatResponse>;
+    chatStream(request: ChatRequest): AsyncGenerator<{
+        content: string;
+        done: boolean;
+    }, void, unknown>;
+    private request;
+    private sleep;
 }
-export declare class RaxAIAPIError extends Error {
+export declare class RaxAIError extends Error {
     status: number;
     type: string;
-    code?: string;
-    requestId?: string;
-    constructor(error: RaxAIError, status: number, requestId?: string);
-    toJSON(): {
-        name: string;
-        message: string;
-        status: number;
-        type: string;
-        code: string | undefined;
-        requestId: string | undefined;
-    };
+    constructor(error: RaxAIErrorType, status: number);
 }
 //# sourceMappingURL=client.d.ts.map
