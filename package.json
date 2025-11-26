@@ -1,0 +1,68 @@
+{
+  "name": "rax-ai-sdk",
+  "version": "1.0.0",
+  "description": "🚀 Official TypeScript SDK for Rax AI - Enterprise-grade AI API with advanced rate limiting, analytics, and security. Build powerful AI applications with our developer-friendly SDK.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "keywords": [
+    "ai",
+    "api",
+    "sdk",
+    "rax-ai",
+    "typescript",
+    "javascript",
+    "chat-completion",
+    "artificial-intelligence",
+    "machine-learning",
+    "llm",
+    "enterprise-ai",
+    "developer-tools",
+    "api-wrapper",
+    "together-ai",
+    "rate-limiting",
+    "analytics",
+    "security",
+    "production-ready",
+    "streaming",
+    "retry-logic"
+  ],
+  "author": {
+    "name": "Raxcore Development Team",
+    "email": "dev@raxcore.com",
+    "url": "https://github.com/Raxcore-dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raxcore-dev/RaxAI.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/Raxcore-dev/RaxAI/issues"
+  },
+  "homepage": "https://github.com/Raxcore-dev/RaxAI/tree/main/packages/sdk#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Raxcore-dev"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Tests coming soon\"",
+    "lint": "echo \"Linting coming soon\"",
+    "docs": "echo \"Documentation generation coming soon\""
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

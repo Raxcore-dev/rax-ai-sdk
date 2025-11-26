@@ -1,0 +1,8 @@
+src/
+tsconfig.json
+*.tsbuildinfo
+.DS_Store
+node_modules/
+coverage/
+.nyc_output/
+*.log
