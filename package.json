@@ -1,6 +1,6 @@
 {
   "name": "rax-ai",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Official SDK for Rax AI Platform - AI API client with chat completions, streaming, models management, and usage tracking.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
