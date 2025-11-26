@@ -1,35 +1,28 @@
 {
-  "name": "rax-ai-sdk",
-  "version": "1.1.0",
-  "description": "🚀 Official SDK for Rax AI Platform - Enterprise-grade AI API client with models management, usage tracking, and intelligent retries. Built for ai.raxcore.dev",
+  "name": "rax-ai",
+  "version": "1.2.0",
+  "description": "Official SDK for Rax AI Platform - AI API client with chat completions, streaming, models management, and usage tracking.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "ai",
     "api",
     "sdk",
     "rax-ai",
+    "raxcore",
     "typescript",
     "javascript",
-    "chat-completion",
-    "artificial-intelligence",
-    "machine-learning",
+    "chat",
     "llm",
-    "enterprise-ai",
-    "developer-tools",
-    "api-wrapper",
-    "together-ai",
-    "rate-limiting",
-    "analytics",
-    "security",
-    "production-ready",
-    "streaming",
-    "retry-logic"
+    "machine-learning",
+    "artificial-intelligence"
   ],
   "author": {
     "name": "Raxcore Development Team",
-    "email": "dev@raxcore.com",
     "url": "https://github.com/Raxcore-dev"
   },
   "license": "MIT",
@@ -41,28 +34,18 @@
   "bugs": {
     "url": "https://github.com/Raxcore-dev/RaxAI/issues"
   },
-  "homepage": "https://github.com/Raxcore-dev/RaxAI/tree/main/packages/sdk#readme",
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/Raxcore-dev"
-  },
+  "homepage": "https://ai.raxcore.dev",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "test": "echo \"Tests coming soon\"",
-    "lint": "echo \"Linting coming soon\"",
-    "docs": "echo \"Documentation generation coming soon\""
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
   }
 }
